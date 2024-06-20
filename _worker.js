@@ -506,10 +506,7 @@ async function fetchApiResponse() {
 }
 
 async function getApiResponse() {
-	if (!apiResponseCache) {
-		return await fetchApiResponse();
-	}
-	return apiResponseCache;
+	return await fetchApiResponse();
 }
 
 async function checkUuidInApiResponse(targetUuid) {
