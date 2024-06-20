@@ -498,12 +498,6 @@ async function fetchApiResponse() {
 		// console.log(apiResponse)
 		apiResponseCache = apiResponse;
 
-		// Refresh the cache every 5 minutes (300000 milliseconds)
-		if (cacheTimeout) {
-			clearTimeout(cacheTimeout);
-		}
-		cacheTimeout = setTimeout(() => fetchApiResponse(), 300000);
-
 		return apiResponse;
 	} catch (error) {
 		console.error('Error:', error);
